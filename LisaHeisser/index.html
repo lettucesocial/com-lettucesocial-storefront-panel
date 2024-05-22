@@ -71,9 +71,9 @@
 					  Work with me
 				  </a> -->
 			  </li>
-			  <!-- <li>
-				<a href="" class="share">Share</a>
-			  </li> -->
+			  <li>
+				<a id='share-this' href="" class="share">Share</a>
+			  </li>
 			</ul>
 		  </nav>
 
@@ -229,5 +229,21 @@
         Powered by LettuceSocial
       </a>
     </footer>
+	<script>
+		const shareButton = document.getElementById("share-this"); 
+		shareButton.addEventListener("click", (e) => { 
+		if (navigator.share) {
+			navigator.share({
+				title: 'Lisa Heisser|storefront',
+				text: 'Lisa Heisser|storefront',
+				url: 'https://storefront.lettucesocial.com/LisaHeisser/',
+			})
+			.then(() => console.log('Successful share'))
+			.catch((error) => console.log('Error sharing', error));
+		} else {
+			console.log('Share not supported on this browser, do it the old way.');
+		}
+		});
+	</script>
   </body>
 </html>
