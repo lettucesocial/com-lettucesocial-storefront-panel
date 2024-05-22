@@ -241,4 +241,18 @@ footer a::before {
   .container {
     width: 1320px;
   }
+}
+@media (min-width: 992.8px) {
+  #result-header ul {
+    justify-content: left;
+  }
+  #product-list {
+    -moz-column-gap: 14%;
+         column-gap: 14%;
+    row-gap: 32px;
+    justify-content: left;
+  }
+  #product-list li {
+    flex: 24% 0 0;
+  }
 }/*# sourceMappingURL=main.css.map */

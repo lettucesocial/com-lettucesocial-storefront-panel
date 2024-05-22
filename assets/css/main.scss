@@ -259,3 +259,19 @@ footer{
     width: 1320px;
   }
 }
+
+@media (min-width: 992.8px) {
+  #result-header{
+    ul{
+      justify-content: left;
+    }
+  }
+  #product-list{
+    column-gap: 14%;
+    row-gap: 32px;
+    justify-content: left;
+    li{
+      flex: 24% 0 0;
+    }
+  }
+}
