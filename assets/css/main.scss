@@ -16,29 +16,127 @@ p {
   padding: 0;
 }
 
+ul {
+  list-style: none;
+}
 @font-face {
   font-family: NunitoSans;
   src: url("https://assets.lettucesocial.com/fonts/NunitoSans-Regular.ttf");
-  
 }
 
 body {
   background-color: rgb(202, 216, 203);
   font-family: NunitoSans;
+  min-height: 100svh;
 }
-ul {
-  list-style: none;
+
+nav {
+  margin-top: 16px;
+  margin-bottom: 64px;
+  ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    li {
+      dl {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        dt {
+          display: none;
+        }
+        .profile-image {
+          grid-row: span 2;
+          margin-right: 8px;
+          img {
+            width: 85px;
+            height: 85px;
+            border-radius: 35%;
+          }
+        }
+        .full-name {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 18px;
+          align-self: center;
+        }
+        .job {
+          color: rgb(147, 134, 128);
+          font-size: 14px;
+          text-transform: capitalize;
+
+        }
+      }
+      .work-link {
+        background: rgba(187, 219, 221, 1);
+        background: linear-gradient(
+          135deg,
+          rgba(187, 219, 221, 1),
+          rgba(250, 155, 187, 1)
+        );
+        border-radius: 16px;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        color: #000;
+        text-align: center;
+        padding: 8px;
+        border: 1px solid #fff;
+        font-weight: bold;
+        position: absolute;
+        bottom: -50px;
+        right: 0;
+        left: 0;
+      }
+      .share {
+        text-indent: -9000px;
+        background-image: url("/assets/images/share.png");
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: block;
+        color: transparent;
+      }
+    }
+  }
 }
+
+#result-header {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 16px 0;
+  ul {
+    display: flex;
+    li {
+      &:nth-child(1) {
+        text-transform: uppercase;
+        margin-right: 4px;
+        &::after {
+          content: "|";
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: normal;
+  }
+}
+
 #product-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 8%;
+  gap: 16px;
   li {
     background-color: rgb(248, 232, 172);
-    border-radius: 16px;
-    padding: 32px;
-    flex: 22% 0 0;
+    border-radius: 24px;
+    padding: 16px;
+    flex: 100% 0 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -51,29 +149,32 @@ ul {
       }
       img {
         width: 100%;
-        border-radius: 16px;
+        border-radius: 12px;
         height: 200px;
       }
 
-      .a{
-        text-transform: uppercase;
-        font-size: 18px;
+      .a {
+        a {
+          text-transform: uppercase;
+          font-size: 18px;
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+        }
       }
-      .b{
+      .b {
         font-size: 16px;
         text-transform: capitalize;
       }
-      .c{
+      .c {
         font-weight: bold;
       }
-      .d{
-        text-decoration: line-through;
-      }
-      .e{
+
+      .e {
         font-size: 14px;
       }
     }
-    a{
+    .buy {
       color: #fff;
       font-size: 20px;
       text-transform: capitalize;
@@ -87,5 +188,61 @@ ul {
       margin-top: 16px;
       font-weight: 200;
     }
+  }
+}
+
+footer{
+  margin: 32px 0 16px 0;
+  a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before{
+      content: "";
+      background: url("/assets//images/logo-type.svg");
+      display: block;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 992.8px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
   }
 }
