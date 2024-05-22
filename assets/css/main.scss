@@ -32,6 +32,8 @@ body {
 
 nav {
   margin-top: 16px;
+  border-bottom: 0.1px solid black;
+  padding-bottom: 6px;
   ul {
     display: flex;
     align-items: flex-start;
@@ -108,7 +110,9 @@ nav {
   margin: 16px 0;
   ul {
     display: flex;
+    justify-content: center;
     li {
+
       &:nth-child(1) {
         text-transform: uppercase;
         margin-right: 4px;
@@ -149,16 +153,21 @@ nav {
       img {
         width: 100%;
         border-radius: 12px;
-        height: 200px;
       }
 
       .a {
         a {
           text-transform: uppercase;
+          text-decoration: underline;
           font-size: 18px;
-          text-decoration: none;
           color: black;
           font-weight: bold;
+        }
+      }
+
+      dd{
+        &:nth-child(6){
+          font-style: italic;
         }
       }
       .b {
@@ -167,6 +176,11 @@ nav {
       }
       .c {
         font-weight: bold;
+        font-size: 20px;
+      }
+
+      .d{
+        font-size: 12px;
       }
 
       .e {
@@ -195,7 +209,7 @@ footer{
   a{
     text-decoration: none;
     color: #000;
-    font-size: 18px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
