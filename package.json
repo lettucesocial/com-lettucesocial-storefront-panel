@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "node deploy.js",
+    "serve": "node serve.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "ftp-deploy": "^2.4.5"
+    "ftp-deploy": "^2.4.5",
+    "live-server": "^1.2.2"
   }
 }
