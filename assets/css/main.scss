@@ -164,6 +164,22 @@ nav {
       }
 
       dd {
+        position: relative;
+        &:nth-child(2) {
+          &::after {
+            content: "";
+            background: url("../images/Expiration-Badge.png");
+            background-position: center;
+            width: 70px;
+            height: 70px;
+            display: block;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: -15px;
+            left: -15px;
+          }
+        }
         &:nth-child(6) {
           font-style: italic;
         }
