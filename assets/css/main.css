@@ -155,6 +155,22 @@ nav ul li .share {
   color: black;
   font-weight: bold;
 }
+#product-list li dl dd {
+  position: relative;
+}
+#product-list li dl dd:nth-child(2)::after {
+  content: "";
+  background: url("../images/Expiration-Badge.png");
+  background-position: center;
+  width: 70px;
+  height: 70px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+}
 #product-list li dl dd:nth-child(6) {
   font-style: italic;
 }
